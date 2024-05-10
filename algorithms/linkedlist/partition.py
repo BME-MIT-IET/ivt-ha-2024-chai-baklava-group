@@ -51,26 +51,3 @@ def partition(head, x):
         current = current.next
 
 
-def test():
-    a = Node("3")
-    b = Node("5")
-    c = Node("8")
-    d = Node("5")
-    e = Node("10")
-    f = Node("2")
-    g = Node("1")
-
-    a.next = b
-    b.next = c
-    c.next = d
-    d.next = e
-    e.next = f
-    f.next = g
-
-    print_linked_list(a)
-    partition(a, 5)
-    print_linked_list(a)
-
-
-if __name__ == '__main__':
-    test()

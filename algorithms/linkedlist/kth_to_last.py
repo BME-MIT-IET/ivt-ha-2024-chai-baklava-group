@@ -1,4 +1,4 @@
-class Node():
+class ListNode():
     def __init__(self, val=None):
         self.val = val
         self.next = None
@@ -74,14 +74,14 @@ def print_linked_list(head):
 def test():
     # def make_test_li
     # A A B C D C F G
-    a1 = Node("A")
-    a2 = Node("A")
-    b = Node("B")
-    c1 = Node("C")
-    d = Node("D")
-    c2 = Node("C")
-    f = Node("F")
-    g = Node("G")
+    a1 = ListNode("A")
+    a2 = ListNode("A")
+    b = ListNode("B")
+    c1 = ListNode("C")
+    d = ListNode("D")
+    c2 = ListNode("C")
+    f = ListNode("F")
+    g = ListNode("G")
     a1.next = a2
     a2.next = b
     b.next = c1

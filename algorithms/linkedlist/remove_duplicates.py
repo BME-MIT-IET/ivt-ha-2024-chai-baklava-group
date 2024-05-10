@@ -18,7 +18,7 @@ def remove_dups(head):
             prev = head
         head = head.next
 
-def remove_dups_wothout_set(head):
+def remove_dups_wthout_set(head):
     """
     Time Complexity: O(N^2)
     Space Complexity: O(1)
@@ -62,5 +62,5 @@ f.next = g
 
 remove_dups(a1)
 print_linked_list(a1)
-remove_dups_wothout_set(a1)
+remove_dups_wthout_set(a1)
 print_linked_list(a1)
