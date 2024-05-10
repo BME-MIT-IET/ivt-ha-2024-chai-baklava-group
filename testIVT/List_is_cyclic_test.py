@@ -2,8 +2,7 @@ import sys
 import unittest
 import os
 
-# Append the directory above 'tests' to sys.path
-sys.path.append(os.path.abspath('../'))
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
 from algorithms.linkedlist.is_cyclic import Node, is_cyclic
 

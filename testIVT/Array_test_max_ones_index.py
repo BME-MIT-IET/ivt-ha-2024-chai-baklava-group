@@ -1,11 +1,10 @@
 import unittest
 import sys
 
-# Adjust the path to include the directory where max_ones_index.py is located.
-sys.path.insert(1, '../algorithms/arrays')
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
 # Import the max_ones_index function from the module
-from max_ones_index import max_ones_index
+from algorithms.arrays.max_ones_index import max_ones_index
 
 class TestMaxOnesIndex(unittest.TestCase):
 

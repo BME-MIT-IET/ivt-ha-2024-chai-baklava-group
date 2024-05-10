@@ -2,8 +2,7 @@ import unittest
 import sys
 import os
 
-# Append the directory above 'tests' to sys.path to find rotate_list module
-sys.path.append(os.path.abspath('../'))
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
 from algorithms.linkedlist.rotate_list import ListNode, rotate_right
 
