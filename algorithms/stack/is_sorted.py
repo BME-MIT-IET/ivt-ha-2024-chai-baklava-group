@@ -11,6 +11,7 @@ The function should return true
 """
 
 
+
 def is_sorted(stack):
     storage_stack = []
     for i in range(len(stack)):
