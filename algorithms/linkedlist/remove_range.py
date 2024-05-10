@@ -9,6 +9,13 @@ List becomes: [8, 13, 17, 23, 0, 92]
 
 legal range of the list (0 < start index < end index < size of list).
 """
+
+class Node():
+    def __init__(self, val = None):
+        self.val = val
+        self.next = None
+
+        
 def remove_range(head, start, end):
     assert(start <= end)
     # Case: remove node at head
