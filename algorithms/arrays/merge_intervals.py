@@ -16,7 +16,7 @@ class Interval:
         self.end = end
 
     def __repr__(self):
-        return "Interval ({}, {})".format(self.start, self.end)
+        return f"Interval ({self.start}, {self.end})"
 
     def __iter__(self):
         return iter(range(self.start, self.end))
@@ -51,7 +51,7 @@ class Interval:
             if out and i.start <= out[-1].end:
                 out[-1].end = max(out[-1].end, i.end)
             else:
-                out += i,
+                out.append(i)
         return out
 
     @staticmethod

@@ -7,7 +7,7 @@ Return a deep copy of the list.
 from collections import defaultdict
 
 
-class RandomListNode(object):
+class RandomListNode:
     def __init__(self, label):
         self.label = label
         self.next = None
@@ -19,7 +19,7 @@ def copy_random_pointer_v1(head):
     :type head: RandomListNode
     :rtype: RandomListNode
     """
-    dic = dict()
+    dic = {}
     m = n = head
     while m:
         dic[m] = RandomListNode(m.label)

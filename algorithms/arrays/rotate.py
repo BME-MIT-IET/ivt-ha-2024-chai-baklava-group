@@ -54,6 +54,13 @@ def rotate_v2(array, k):
 
 
 def rotate_v3(array, k):
+    """
+    Rotate the array using slicing
+    T(n) - O(n)
+    :type array: List[int]
+    :type k: int
+    :rtype: List[int]
+    """
     if array is None:
         return None
     length = len(array)

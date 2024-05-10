@@ -11,6 +11,14 @@ import collections
 
 # Time complexity O(n^2)
 def delete_nth_naive(array, n):
+    """
+    Delete occurrences of an element if it occurs more than n times
+    Time complexity O(n^2)
+
+    :param array: List[int]: Input array
+    :param n: int: Maximum occurrences allowed
+    :return: List[int]: Array with elements occurring at most n times
+    """
     ans = []
     for num in array:
         if ans.count(num) < n:
@@ -20,6 +28,14 @@ def delete_nth_naive(array, n):
 
 # Time Complexity O(n), using hash tables.
 def delete_nth(array, n):
+    """
+    Delete occurrences of an element if it occurs more than n times
+    Time Complexity O(n), using hash tables.
+
+    :param array: List[int]: Input array
+    :param n: int: Maximum occurrences allowed
+    :return: List[int]: Array with elements occurring at most n times
+    """
     result = []
     counts = collections.defaultdict(int)  # keep track of occurrences
 

@@ -8,6 +8,13 @@ from collections.abc import Iterable
 
 # return list
 def flatten(input_arr, output_arr=None):
+    """
+    Flatten a nested array into a single resultant array recursively.
+
+    :param input_arr: Iterable: Input array that may contain nested arrays
+    :param output_arr: List: Resultant array
+    :return: List: Flattened array
+    """
     if output_arr is None:
         output_arr = []
     for ele in input_arr:
@@ -26,6 +33,6 @@ def flatten_iter(iterable):
     """
     for element in iterable:
         if not isinstance(element, str) and isinstance(element, Iterable):
-            yield from flatten_iter(element)    
+            yield from flatten_iter(element)
         else:
             yield element

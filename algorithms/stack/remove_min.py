@@ -15,16 +15,15 @@ def remove_min(stack):
     if len(stack) == 0:  # Stack is empty
         return stack
     # Find the smallest value
-    min = stack.pop()
-    stack.append(min)
-    for i in range(len(stack)):
+    min_val = stack.pop()
+    stack.append(min_val)
+    for _ in range(len(stack)):
         val = stack.pop()
-        if val <= min:
-            min = val
+        min_val = min(min_val, val)
         storage_stack.append(val)
     # Back up stack and remove min value
-    for i in range(len(storage_stack)):
+    for _ in range(len(storage_stack)):
         val = storage_stack.pop()
-        if val != min:
+        if val != min_val:
             stack.append(val)
     return stack
