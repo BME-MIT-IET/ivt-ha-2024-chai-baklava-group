@@ -10,15 +10,23 @@ The time complexity of the below algorithm is O(n).
 
 # False == 0 is True
 def move_zeros(array):
+    """
+    Move all zeros to the end of the array while preserving the order of other elements.
+
+    Args:
+        array (list): Input array.
+
+    Returns:
+        list: Modified array with zeros moved to the end.
+    """
     result = []
     zeros = 0
 
     for i in array:
-            if i == 0 and type(i) != bool:  # not using `not i` to avoid `False`, `[]`, etc.
-                zeros += 1
-            else:
-                result.append(i)
-    
+        if i == 0 and not isinstance(i, bool):
+            zeros += 1
+        else:
+            result.append(i)
     result.extend([0] * zeros)
     return result
 

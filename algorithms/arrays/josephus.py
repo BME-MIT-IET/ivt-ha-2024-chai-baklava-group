@@ -10,6 +10,13 @@ Output: 369485271
 """
 
 def josephus(int_list, skip):
+    """
+    Print every nth member while removing them in a circular fashion.
+
+    :param int_list: list[int]: List of integers representing people sitting in a circular fashion.
+    :param skip: int: Number of members to skip before removing the next one.
+    :return: generator: Generator yielding the removed members.
+    """
     skip = skip - 1                     # list starts with 0 index
     idx = 0
     len_list = (len(int_list))

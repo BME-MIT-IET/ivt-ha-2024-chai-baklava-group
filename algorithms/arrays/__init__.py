@@ -1,3 +1,7 @@
+"""
+Module for arrays manipulation.
+"""
+
 from .delete_nth import *
 from .flatten import *
 from .garage import *

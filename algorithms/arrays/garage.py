@@ -33,7 +33,13 @@ Sequence :
 
 
 def garage(initial, final):
+    """
+    Find the least movement needed to rearrange the parking lot from the initial state to the final state.
 
+    :param initial: list: Initial state of the parking lot
+    :param final: list: Final state of the parking lot
+    :return: tuple: Steps taken, Sequence of changes in states
+    """
     initial = initial[::]      # prevent changes in original 'initial'
     seq = []                   # list of each step in sequence
     steps = 0
@@ -41,18 +47,18 @@ def garage(initial, final):
         zero = initial.index(0)
         if zero != final.index(0):  # if zero isn't where it should be,
             car_to_move = final[zero]   # what should be where zero is,
-            pos = initial.index(car_to_move)         # and where is it?
+            pos = initial.index(car_to_move) # and where is it?
             initial[zero], initial[pos] = initial[pos], initial[zero]
         else:
-            for i in range(len(initial)):
-                if initial[i] != final[i]:
+            for i, val in enumerate(initial):
+                if val != final[i]:
                     initial[zero], initial[i] = initial[i], initial[zero]
                     break
         seq.append(initial[::])
         steps += 1
 
-    return steps, seq       
-    # e.g.:  4, [{0, 2, 3, 1, 4}, {2, 0, 3, 1, 4}, 
+    return steps, seq
+    # e.g.:  4, [{0, 2, 3, 1, 4}, {2, 0, 3, 1, 4},s
     #            {2, 3, 0, 1, 4}, {0, 3, 2, 1, 4}]
 
 """

@@ -14,10 +14,19 @@ Example:
 
 
 def two_sum(array, target):
+    """
+    Find indices of two numbers in the array that add up to the target.
+
+    Args:
+        array (list of int): Input array of integers.
+        target (int): Target sum.
+
+    Returns:
+        tuple or None: Indices of the two numbers if found, else None.
+    """
     dic = {}
     for i, num in enumerate(array):
         if num in dic:
             return dic[num], i
-        else:
-            dic[target - num] = i
+        dic[target - num] = i
     return None

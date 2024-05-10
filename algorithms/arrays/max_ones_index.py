@@ -17,7 +17,16 @@ So the function return => 3
 
 
 def max_ones_index(arr):
+    """
+    Find index of 0 replace with 1 to get longest continuous sequence of 1s in binary array.
 
+    Args:
+        arr (list[int]): The input binary array.
+
+    Returns:
+        int: Index of the 0 to be replaced with 1 to achieve longest continuous sequence of 1s.
+             If there is no 0 in the array, returns -1.
+    """
     n = len(arr)
     max_count = 0
     max_index = 0
