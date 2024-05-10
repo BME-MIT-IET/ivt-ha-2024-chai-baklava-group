@@ -9,6 +9,12 @@ After reverse:
 # Iterative solution
 # T(n)- O(n)
 #
+
+class ListNode:
+
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 def reverse_list(head):
     """
     :type head: ListNode

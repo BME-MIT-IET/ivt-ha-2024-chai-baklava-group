@@ -14,6 +14,12 @@ return 4->5->1->2->3->NULL.
 #         self.next = None
 
 
+class ListNode:
+
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 def rotate_right(head, k):
     """
     :type head: ListNode
