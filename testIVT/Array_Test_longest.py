@@ -1,11 +1,10 @@
 import unittest
 import sys
 
-# Adjust the path to include the directory where longest_non_repeat.py is located.
-sys.path.insert(1, '../algorithms/arrays')
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
 # Import the functions directly from the module
-from longest_non_repeat import (
+from algorithms.arrays.longest_non_repeat import (
     longest_non_repeat_v1,
     longest_non_repeat_v2,
     get_longest_non_repeat_v1,

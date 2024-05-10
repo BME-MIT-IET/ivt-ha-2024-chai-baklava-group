@@ -1,10 +1,9 @@
 import unittest
 import sys
 
-# Adjust the path for importing based on your file organization
-sys.path.insert(1, '../algorithms/arrays')
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
-from limit import limit  # Import the limit function directly
+from algorithms.arrays.limit import limit  # Import the limit function directly
 
 class TestLimit(unittest.TestCase):
 

@@ -2,7 +2,7 @@ import unittest
 import sys
 import os
 
-sys.path.append(os.path.abspath('../'))
+sys.path.insert(1, '../') # Including the parent directory to the path so that the module can be imported
 
 from algorithms.linkedlist.is_palindrome import is_palindrome, is_palindrome_stack, is_palindrome_dict, ListNode
 
